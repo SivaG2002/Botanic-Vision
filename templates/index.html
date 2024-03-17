@@ -1,25 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Image Prediction</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rice Leaf Disease Detector</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional inline styles for demonstration purposes */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Style for the image preview */
+    #image-preview {
+      width: 5cm; /* Set width to 5 cm */
+      height: 5cm; /* Set height to 5 cm */
+      border-radius: 50%; /* Make it a circle */
+      overflow: hidden; /* Hide any overflow content */
+      margin-top: 20px; /* Add margin to move it slightly more to the center */
+      margin-left: auto; /* Align center horizontally */
+      margin-right: auto; /* Align center horizontally */
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+    }
+  </style>
 </head>
 <body>
-    <h1>Image Prediction</h1>
-    {% if filename is not none %}
-        <p>Uploaded file: {{ filename }}</p>
-    {% endif %}
+  <div id="landing-page" style="background-image: url('https://www.drodd.com/images14/black15.jpg'); background-size: cover; background-position: center;">
+    <div class="logo-container">
+      <video autoplay loop muted class="logo">
+        <source src="logo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <span class="popup-text">BOTANIC VISION</span>
+    </div>
+  </div>
 
-    {% if prediction is not none %}
-        <p>Predicted Class: {{ prediction }}</p>
-    {% endif %}
+  <div id="main-content" style="display: none;">
+    <!-- Centered heading -->
+    <h1 class="centered-heading">Disease Detector</h1>
+    <!-- Introduction text with typing animation -->
+    <div class="introduction">
+      <p id="intro-text"></p>
+    </div>
+    <!-- Image previews -->
+    <div id="image-preview"></div>
+    <!-- File upload input -->
+    <input type="file" id="upload-input" accept="image/*">
+    <!-- Button container -->
+    <div id="button-container">
+      <!-- Buttons for taking and uploading image -->
+      <button id="capture-btn" class="button">Take Image</button>
+      <button id="upload-btn" class="button">Upload Image</button>
+    </div>
+  </div>
 
-    {% if message is not none %}
-        <p>{{ message }}</p>
-    {% endif %}
-
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <input type="submit" value="Predict">
-    </form>
+  <script src="main.js"></script>
 </body>
 </html>
