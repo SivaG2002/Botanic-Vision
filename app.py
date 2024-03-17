@@ -85,7 +85,7 @@ def index():
             flash('Allowed file types: jpg, jpeg, png, gif')
 
     return render_template('index.html', prediction=prediction, filename=filename, message=message)
-
+             
 # Run the app (if executed directly)
 if __name__ == '__main__':
     app.run(debug=True)

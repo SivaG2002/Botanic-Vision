@@ -27,10 +27,10 @@
   </style>
 </head>
 <body>
-  <div id="landing-page" style="background-image: url('https://www.drodd.com/images14/black15.jpg'); background-size: cover; background-position: center;">
+  <div id="landing-page" style="background-image: url('{{ url_for('static', filename='black15.jpg') }}'); background-size: cover; background-position: center;">
     <div class="logo-container">
       <video autoplay loop muted class="logo">
-        <source src="static\logo.mp4" type="video/mp4">
+        <source src="{{ url_for('static', filename='logo.mp4') }}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <span class="popup-text">BOTANIC VISION</span>
@@ -47,15 +47,22 @@
     <!-- Image previews -->
     <div id="image-preview"></div>
     <!-- File upload input -->
-    <input type="file" id="upload-input" accept="image/*">
+    <input type="file" id="upload-input" accept="image/*" style="display: none;">
     <!-- Button container -->
     <div id="button-container">
       <!-- Buttons for taking and uploading image -->
       <button id="capture-btn" class="button">Take Image</button>
       <button id="upload-btn" class="button">Upload Image</button>
+      <button id="predict-btn" class="button">Predict</button>
+     
     </div>
+    
   </div>
-
+   
   <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
+
+
+
+
