@@ -1,22 +1,96 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire">
     <title>Prediction Result</title>
+    
+<style>
+        /* Global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: Arial, sans-serif;
+
+            
+        }   
+        
+        .bg-wrapper {
+            background-image: url('https://free4kwallpapers.com/uploads/originals/2019/11/16/forest-road-dark-wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            /* Blur the background image */
+            height: 100vh;
+            /* Fit the background to the screen */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        #page{
+            font-family: "Audiowide", sans-serif;
+            top:3%;
+            padding-left: 41%;
+            text-align: center;
+            text-align: justify;
+        }
+
+        #intow{
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            font-family:Apple Chancery, cursive;
+            font-size: 15px;
+
+        }
+
+        #pq
+            {
+                position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/opacity/see-through */
+            color: white;
+            font-weight: normal;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 20%;
+            padding: 20px;
+            
+            
+        }
+
+        
+</style>  
 </head>
 
 <body>
-    <h1>Prediction Result</h1>
+    <div class="bg-wrapper"></div>
+    <h1 id="page">Prediction Result </h1>
+    <p id="intow"> The given image of the leaf have been  uploaded successfully. The disease have been predicted and is mentioned below.The cause,threats &cure for that particular disease will also be presented below</p>
 
     {% if prediction is not none %}
-    <p>Predicted Class: {{ prediction }}</p>
-    {% endif %}
-
-    {% if message is not none %}
-    <p>{{ message }}</p>
+    <p id="pq">Disease Detected  is {{ prediction }}</p>
     {% endif %}
 </body>
 
-</html>
