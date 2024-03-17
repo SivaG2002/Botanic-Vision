@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Prediction</title>
+</head>
+<body>
+    <h1>Image Prediction</h1>
+    {% if filename is not none %}
+        <p>Uploaded file: {{ filename }}</p>
+    {% endif %}
+
+    {% if prediction is not none %}
+        <p>Predicted Class: {{ prediction }}</p>
+    {% endif %}
+
+    {% if message is not none %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
