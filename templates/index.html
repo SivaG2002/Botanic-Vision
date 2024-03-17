@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rice Leaf Disease Detector</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <style>
     /* Additional inline styles for demonstration purposes */
     body {
@@ -30,7 +30,7 @@
   <div id="landing-page" style="background-image: url('https://www.drodd.com/images14/black15.jpg'); background-size: cover; background-position: center;">
     <div class="logo-container">
       <video autoplay loop muted class="logo">
-        <source src="logo.mp4" type="video/mp4">
+        <source src="static\logo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <span class="popup-text">BOTANIC VISION</span>
@@ -56,6 +56,6 @@
     </div>
   </div>
 
-  <script src="main.js"></script>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
