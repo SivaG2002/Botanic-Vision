@@ -68,14 +68,19 @@ def predict():
             class_labels = ['Brown spot', 'Leaf smut', 'Tungro', 'Leaf Blast', 'Bacterial leaf blight']
 
             def get_class_label(predictions):
-                predicted_class_index = np.argmax(predictions)
-                return class_labels[predicted_class_index]
+                max_index = np.argmax(predictions)
+                max_value = predictions[0][max_index]
+                percentage = max_value * 100  # Convert to percentage
+                if max_value < 0.9:  # Check if the max prediction value is less than 0.1 (10%)
+                    return 'Error', percentage
+                else:
+                    return class_labels[max_index], percentage
 
             # Extract and display the predicted class label (if prediction exists)
             if prediction is not None:
-                predicted_class = get_class_label(prediction)
-                message = f"Predicted Class: {predicted_class}"
-                return render_template('predict.html', prediction=predicted_class, message=message)
+                predicted_class, percentage = get_class_label(prediction)
+                message = f"Predicted Class: {predicted_class} (Confidence: {percentage:.2f}%)"
+                return render_template('predict.html', prediction=predicted_class, percentage=percentage, message=message)
 
         except Exception as e:
             # Customize error message with more details
