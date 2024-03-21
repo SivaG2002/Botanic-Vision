@@ -89,18 +89,34 @@
             font-size: 30px;
         }
 
-        #Brown_Spot {
-            padding: 20px;
-            background-color: #ffeeba;
-            /* You can change the background color as needed */
-            color: #856404;
-            /* You can change the text color as needed */
-            border: 1px solid #ffeeba;
-            /* You can modify the border style as needed */
-            width: 100vw;
-            height: 100vh;
-            overflow-y: auto;
-            /* Enable scrolling for Brown Spot section */
+
+        .search-button {
+            background-image: url('https://icon-library.com/images/google-search-icon/google-search-icon-0.jpg');
+            background-size: cover;
+            width: 45px;
+            height: 45px;
+            border: 1%;
+            cursor: pointer;
+            outline: none;
+            background-color: rgba(240, 248, 255, 0);
+            transition-duration: 0.4s;
+            border-radius: 50%;
+
+        }
+
+        .search-button:hover {
+            background-color: rgba(12, 12, 12, 0);
+            color: white;
+            border: none;
+            border: 50%;
+            background-image: url('https://www.seekpng.com/png/full/191-1914658_wheat-vector-png.png');
+        }
+
+
+        #butt {
+            top: 81%;
+            left: 63%;
+            position: absolute;
         }
     </style>
 </head>
@@ -120,10 +136,19 @@
 
             <p id="pq"> {{prediction }}</a> </p>
             {% endif %}
+
+            <div id="butt">
+                <button onclick="redirect()" class="search-button"></button>
+            </div>
+
+
         </div>
     </div>
 
-    <div>
-      
-    </div>
+    <script>
+        function redirect() {
+            window.location.href = "{{ redirect_url }}";
+        }
+    </script>
+
 </body>
