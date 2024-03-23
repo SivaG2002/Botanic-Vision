@@ -8,115 +8,237 @@
     <title>Prediction Result</title>
 
     <style>
-        /* Global styles */
-        body {
-            margin: 0;
-            padding: 0;
-            color: white;
-            font-family: Arial, sans-serif;
-            background-size: 100vw 100vh;
+        @media (min-width: 1024px) {
+
+            /* Global styles */
+            body {
+                margin: 0;
+                padding: 0;
+                color: white;
+                font-family: Arial, sans-serif;
+                background-size: 100vw 100vh;
+            }
+
+            .bg-wrapper {
+                background-image: url('https://hdqwalls.com/wallpapers/abstract-simple-colors-8k-jk.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+
+                /* Blur the background image */
+                height: 100vh;
+                /* Fit the background to the screen */
+
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+
+            #page {
+                font-family: "Audiowide", sans-serif;
+                top: 3%;
+                padding-left: 41%;
+                text-align: center;
+                text-align: justify;
+               
+            }
+
+            #intow {
+                position: absolute;
+                top: 42%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 90%;
+                padding: 199px;
+                padding-inline-start: 2%;
+                padding-inline-end: 2%;
+                font-family: Apple Chancery, cursive;
+                font-size: 19px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/opacity/see-through */
+                color: white;
+                border: 3px solid #f1f1f1;
+                position: absolute;
+                left: 50%;
+                text-justify: inter-word;
+                text-align: justify;
+
+            }
+
+            #pq {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/opacity/see-through */
+                color: white;
+                font-weight: normal;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+                width: 20%;
+                padding: 20px;
+                font-size: 30px;
+            }
+
+
+            .search-button {
+                background-image: url('https://icon-library.com/images/google-search-icon/google-search-icon-0.jpg');
+                background-size: cover;
+                width: 45px;
+                height: 45px;
+                border: 1%;
+                cursor: pointer;
+                outline: none;
+                background-color: rgba(240, 248, 255, 0);
+                transition-duration: 0.4s;
+                border-radius: 50%;
+
+            }
+
+            .search-button:hover {
+                background-color: rgba(12, 12, 12, 0);
+                color: white;
+                border: 1%;
+                border: 50%;
+                background-image: url('https://www.seekpng.com/png/full/191-1914658_wheat-vector-png.png');
+            }
+
+
+            #butt {
+                top: 81%;
+                left: 63%;
+                position: absolute;
+            }
+
         }
 
-        .bg-wrapper {
-            background-image: url('https://hdqwalls.com/wallpapers/abstract-simple-colors-8k-jk.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-
-            /* Blur the background image */
-            height: 100vh;
-            /* Fit the background to the screen */
-
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-
-        #page {
-            font-family: "Audiowide", sans-serif;
-            top: 3%;
-            padding-left: 41%;
-            text-align: center;
-            text-align: justify;
-        }
-
-        #intow {
-            position: absolute;
-            top: 42%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            width: 90%;
-            padding: 199px;
-            padding-inline-start: 2%;
-            padding-inline-end: 2%;
-            font-family: Apple Chancery, cursive;
-            font-size: 19px;
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/opacity/see-through */
-            color: white;
-            border: 3px solid #f1f1f1;
-            position: absolute;
-            left: 50%;
-            text-justify: inter-word;
-            text-align: justify;
-
-        }
-
-        #pq {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/opacity/see-through */
-            color: white;
-            font-weight: normal;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            width: 20%;
-            padding: 20px;
-            font-size: 30px;
-        }
 
 
-        .search-button {
-            background-image: url('https://icon-library.com/images/google-search-icon/google-search-icon-0.jpg');
-            background-size: cover;
-            width: 45px;
-            height: 45px;
-            border: 1%;
-            cursor: pointer;
-            outline: none;
-            background-color: rgba(240, 248, 255, 0);
-            transition-duration: 0.4s;
-            border-radius: 50%;
+        @media (max-width: 430px) {
 
-        }
+            body {
+                margin: 0;
+                padding: 0;
+                color: white;
+                font-family: Arial, sans-serif;
+                background-size: 100vw 100vh;
+            }
 
-        .search-button:hover {
-            background-color: rgba(12, 12, 12, 0);
-            color: white;
-            border: 1%;
-            border: 50%;
-            background-image: url('https://www.seekpng.com/png/full/191-1914658_wheat-vector-png.png');
-        }
+            .bg-wrapper {
+                background-image: url('https://hdqwalls.com/wallpapers/abstract-simple-colors-8k-jk.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+
+                /* Blur the background image */
+                height: 100vh;
+                /* Fit the background to the screen */
+
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+
+            #page {
+                font-family: "Audiowide", sans-serif;
+                top: 3%;
+
+                left: 14%;
+                position: relative;
+                text-align: justify;
+            }
+
+            #intow {
+                position: absolute;
+                top: 42%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 90%;
+                padding: 199px;
+                padding-inline-start: 2%;
+                padding-inline-end: 2%;
+                font-family: Apple Chancery, cursive;
+                font-size: 19px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/opacity/see-through */
+                color: white;
+                border: 3px solid #f1f1f1;
+                position: absolute;
+                left: 50%;
+                text-justify: inter-word;
+                text-align: justify;
+
+            }
+
+            #pq {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.4);
+                color: white;
+                font-weight: normal;
+                bottom: 29px;
+                left: 36%;
+                transform: translateX(-50%);
+                z-index: 2;
+                width: 57%;
+                padding: 17px;
+                font-size: 30px;
+            }
 
 
-        #butt {
-            top: 81%;
-            left: 63%;
-            position: absolute;
+            .search-button {
+                background-image: url('https://icon-library.com/images/google-search-icon/google-search-icon-0.jpg');
+                background-size: cover;
+                width: 45px;
+                height: 45px;
+                border: 1%;
+                cursor: pointer;
+                outline: none;
+                background-color: rgba(240, 248, 255, 0);
+                transition-duration: 0.4s;
+                border-radius: 50%;
+
+            }
+
+            .search-button:hover {
+                background-color: rgba(12, 12, 12, 0);
+                color: white;
+                border: 1%;
+                border: 50%;
+                background-image: url('https://www.seekpng.com/png/full/191-1914658_wheat-vector-png.png');
+            }
+
+
+            #butt {
+                top: 86%;
+                left: 72%;
+                position: absolute;
+            }
+
+
         }
     </style>
 </head>
