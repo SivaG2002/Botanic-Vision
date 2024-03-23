@@ -3,444 +3,903 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="https://i.pinimg.com/736x/13/20/98/1320980fa07dd189b052bef56f79dead.jpg" type="image/icon type">
+    <link rel="icon" href="https://i.pinimg.com/736x/13/20/98/1320980fa07dd189b052bef56f79dead.jpg"
+        type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire">
     <title>Brown Spot</title>
 
     <style>
-        /* Global styles */
-        body {
-            margin: 0;
-            padding: 0;
-            color: white;
-            font-family: Arial, sans-serif;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+        @media (min-width: 1024px) {
+            body {
+                margin: 0;
+                padding: 0;
+                color: white;
+                font-family: Arial, sans-serif;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
 
-        .bg-wrapper {
-    position: relative;
-    height: 100vh;
-    background-image: url('https://i.pinimg.com/originals/ce/c4/ee/cec4ee792d64120b28b708c1424c2a45.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden; /* Add this line to hide overflow from background */
-}
+            .bg-wrapper {
+                position: relative;
+                height: 100vh;
+                background-image: url('https://i.pinimg.com/originals/ce/c4/ee/cec4ee792d64120b28b708c1424c2a45.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                overflow: hidden;
+                /* Add this line to hide overflow from background */
+            }
 
-.content-wrapper {
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow-y: auto; /* Change to 'auto' to enable scrolling */
-    padding-top: 27vh;
-}
+            .content-wrapper {
+                position: absolute;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow-y: auto;
+                /* Change to 'auto' to enable scrolling */
+                padding-top: 27vh;
+            }
 
-        .blur-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(8px);
-            background-color: rgba(0, 0, 0, 0.5);
-        }
+            .blur-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(8px);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
 
-        
 
-        #page {
-            position: absolute;
-            font-family: "Audiowide", sans-serif;
-            color: white;
-            font-weight: bold;
-            margin-bottom: 20px;
-            top: 0.01px;
-            text-align: center;
-            font-size: 5vw;
-        }
 
-        p {
-            color: white;
-            text-align: center;
-            /* Center the text */
-        }
+            #page {
+                position: absolute;
+                font-family: "Audiowide", sans-serif;
+                color: white;
+                font-weight: bold;
+                margin-bottom: 20px;
+                top: 0.01px;
+                text-align: center;
+                font-size: 5vw;
+            }
 
-        #introText {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-           /* background-color: rgb(0, 0, 0);
+            p {
+                color: white;
+                text-align: center;
+                /* Center the text */
+            }
+
+            #pes13 {
+
+
+                top: 207vh;
+                position: absolute;
+                border: #000;
+                left: 226px;
+            }
+
+            #introText {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                /* background-color: rgb(0, 0, 0);
             /* Fallback color */
-         /*   background-color: rgba(0, 0, 0, 0.4);
+                /*   background-color: rgba(0, 0, 0, 0.4);
             /* Black w/opacity/see-through */
-            color: white;
-            font-weight: normal;
-            font-size: 1vw;
-            position: absolute;
-            top: 75vh;
-            left: 45%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            text-align: justify;
-            text-justify: inter-word;
-            font-family: "Lucida Console", "Courier New", monospace;
-            line-height: 1.3;
-        }
-
-       
-        #cause{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-           
-            color: white;
-            font-weight: normal;
-            
-            position: absolute;
-            top: 90vh;
-            left: 45%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            text-align: justify;
-            text-justify: inter-word;
-            font-family: "Audiowide", sans-serif;
-            font-size: 3vw;
-            line-height: 1.3;
-
-        }
-        
-        #cause1{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-           
-            color: white;
-            font-weight: normal;
-            
-            position: absolute;
-            top: 107vh;
-            left: 45%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            text-align: justify;
-            text-justify: inter-word;
-            font-family: "Lucida Console", "Courier New", monospace;
-            font-size: 1vw;
-            line-height: 1.3;
-
-        }
-
-        #Prevention{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-           
-            color: white;
-            font-weight: normal;
-            
-            position: absolute;
-            top: 119vh;
-            left: 45%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            text-align: justify;
-            text-justify: inter-word;
-            font-family: "Audiowide", sans-serif;
-            font-size: 3vw;
-            line-height: 1.3;
-
-        }
-
-        #Prevention1{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-           
-            color: white;
-            font-weight: normal;
-            
-            position: absolute;
-            top: 139vh;
-            left: 45%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            text-align: justify;
-            text-justify: inter-word;
-            font-family: "Lucida Console", "Courier New", monospace;
-            font-size: 1vw;
-            line-height: 1.3;
-
-        }
-
-        #Pes{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-           
-            color: white;
-            font-weight: normal;
-            
-            position: absolute;
-            top: 151vh;
-            left: 45%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            text-align: justify;
-            text-justify: inter-word;
-            font-family: "Audiowide", sans-serif;
-            font-size: 3vw;
-            line-height: 1.3;
-
-        }
-
-        #Pes1{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-           
-            color: white;
-            font-weight: normal;
-            
-            position: absolute;
-            top: 168vh;
-            left: 45%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            text-align: justify;
-            text-justify: inter-word;
-            font-family: "Lucida Console", "Courier New", monospace;
-            font-size: 1vw;
-            line-height: 1.3;
-
-        }
-        
-        #pes2{
-           
-            align-items: center;
-            top: 178vh;
-            position: absolute;
-        
-        }
-
-        #pes3{
-           
-           align-items: center;
-           top: 196vh;
-           position: absolute;
-           border: #000;
-       }
+                color: white;
+                font-weight: normal;
+                font-size: 1vw;
+                position: absolute;
+                top: 75vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                line-height: 1.3;
+            }
 
 
-       #pes12{
-           
-           left: 10%;
-           top: 178vh;
-           position: absolute;
-       
-       }
+            #cause {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
 
-       #pes13{
-          
-          left:12%;
-          top: 196vh;
-          position: absolute;
-          border: #000;
-      }
+                color: white;
+                font-weight: normal;
 
-      
-      #pes22{
-           
-           right: 10%;
-           top: 178vh;
-           position: absolute;
-       
-       }
-
-       #pes23{
-          
-          right:12%;
-          top: 196vh;
-          position: absolute;
-          border: #000;
-      }
-
-
-
-
-       .button {
-            border-radius: 12px;
-            background-size: cover;
-            width: 75px;
-            height: 45px;
-            border: 2px;
-            border: 2px solid #04AA6D;
-
-            cursor: pointer;
-            outline: none;
-            background-color: rgb(190, 209, 19);
-            transition-duration: 0.4s;
-            size: 2px;
-            font-weight: 2px;
-
-        }
-
-        .button:hover {
-            background-color: rgba(130, 139, 9, 0);
-            color: aliceblue;
-
-        }
-        
-        #pes4{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-           
-            color: white;
-            font-weight: normal;
-            
-            position: absolute;
-            top: 240vh;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            
-            text-justify: inter-word;
-            font-family: "Audiowide", sans-serif;
-            font-size: 1vw;
-            line-height: 1.3;
-           
-           
-           
-           
-       }
-
- 
-
-           
-        
-        .content{
-            margin:auto;
-            width:190px;
-            perspective:1000px;
-            position:relative;
-            padding-top:80px;
-            
-        }
-        .content-carrousel{
-            width:100%;
-            position:absolute;
-            float:right;
-            animation:rotar 15s infinite linear;
-            transform-style:preserve-3d; 
-            
-        }
-        .content-carrousel:hover{
-            animation-play-state:paused;
-            cursor:pointer;
-        }
-        .content-carrousel figure{
-            width:100%;
-            height:120px;
-            border:1px solid #4d444d;
-            overflow:hidden;
-            position:absolute;
-            
-        }
-        .content-carrousel figure:nth-child(1)
-        {
-            transform:rotateY(0deg) translateZ(300px);
-        }
-        .content-carrousel figure:nth-child(2)
-        {
-            transform:rotateY(40deg) translateZ(300px);
-        }
-        .content-carrousel figure:nth-child(3)
-        {
-            transform:rotateY(80deg) translateZ(300px);
-        }
-        .content-carrousel figure:nth-child(4)
-        {
-            transform:rotateY(120deg) translateZ(300px);
-        }
-        .content-carrousel figure:nth-child(5)
-        {
-            transform:rotateY(160deg) translateZ(300px);
-        }
-        .content-carrousel figure:nth-child(6)
-        {
-            transform:rotateY(200deg) translateZ(300px);
-        }
-        .content-carrousel figure:nth-child(7)
-        {
-            transform:rotateY(240deg) translateZ(300px);
-        }
-        .content-carrousel figure:nth-child(8)
-        {
-            transform:rotateY(280deg) translateZ(300px);
-        }
-        .content-carrousel figure:nth-child(9)
-        {
-            transform:rotateY(320deg) translateZ(300px);
-        }
-        .shadow{
-            position:absolute;
-            box-shadow:0px 0px 20px 0px #000;
-            border-radius:2px;
-        }
-        .content-carrousel img{
-            image-rendering:auto;
-            transition:all 300ms;
-            width:100%;
-            height:100%;
-        }
-        .content-carrousel img:hover{
-            transform:scale(1.2);
-            transition:all 300ms;
-            
-        }
-        @keyframes rotar{
-            from{
-                transform:rotateY(0deg);
-            }to{
-            transform:rotateY(360deg);
+                position: absolute;
+                top: 90vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 3vw;
+                line-height: 1.3;
 
             }
+
+            #cause1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 107vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 1vw;
+                line-height: 1.3;
+
+            }
+
+            #Prevention {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 119vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #Prevention1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 139vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 1vw;
+                line-height: 1.3;
+
+            }
+
+            #Pes {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 151vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #Pes1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 168vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 1vw;
+                line-height: 1.3;
+
+            }
+
+            #pes2 {
+
+                align-items: center;
+                top: 178vh;
+                position: absolute;
+
+            }
+
+            #pes3 {
+
+                align-items: center;
+                top: 207vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+            #pes12 {
+
+                left: 10%;
+                top: 178vh;
+                position: absolute;
+
+            }
+
+
+
+            #pes22 {
+
+                right: 10%;
+                top: 178vh;
+                position: absolute;
+
+            }
+
+            #pes23 {
+
+                right: 13%;
+                top: 207vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+
+
+            .button {
+                border-radius: 12px;
+                background-size: cover;
+                width: 75px;
+                height: 45px;
+                border: 2px;
+                border: 2px solid #04AA6D;
+
+                cursor: pointer;
+                outline: none;
+                background-color: rgb(190, 209, 19);
+                transition-duration: 0.4s;
+                size: 2px;
+                font-weight: 2px;
+
+            }
+
+            .button:hover {
+                background-color: rgba(130, 139, 9, 0);
+                color: aliceblue;
+
+            }
+
+            #pes4 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 240vh;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 1vw;
+                line-height: 1.3;
+
+
+
+
+            }
+
+
+
+
+
+            .content {
+                margin: auto;
+                width: 190px;
+                perspective: 1000px;
+                position: relative;
+                padding-top: 80px;
+
+            }
+
+            .content-carrousel {
+                width: 100%;
+                position: absolute;
+                float: right;
+                animation: rotar 15s infinite linear;
+                transform-style: preserve-3d;
+
+            }
+
+            .content-carrousel:hover {
+                animation-play-state: paused;
+                cursor: pointer;
+            }
+
+            .content-carrousel figure {
+                width: 100%;
+                height: 120px;
+                border: 1px solid #4d444d;
+                overflow: hidden;
+                position: absolute;
+
+            }
+
+            .content-carrousel figure:nth-child(1) {
+                transform: rotateY(0deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(2) {
+                transform: rotateY(40deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(3) {
+                transform: rotateY(80deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(4) {
+                transform: rotateY(120deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(5) {
+                transform: rotateY(160deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(6) {
+                transform: rotateY(200deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(7) {
+                transform: rotateY(240deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(8) {
+                transform: rotateY(280deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(9) {
+                transform: rotateY(320deg) translateZ(300px);
+            }
+
+            .shadow {
+                position: absolute;
+                box-shadow: 0px 0px 20px 0px #000;
+                border-radius: 2px;
+            }
+
+            .content-carrousel img {
+                image-rendering: auto;
+                transition: all 300ms;
+                width: 100%;
+                height: 100%;
+            }
+
+            .content-carrousel img:hover {
+                transform: scale(1.2);
+                transition: all 300ms;
+
+            }
+
+            @keyframes rotar {
+                from {
+                    transform: rotateY(0deg);
+                }
+
+                to {
+                    transform: rotateY(360deg);
+
+                }
+            }
+
         }
 
+        @media (max-width: 430px) {
 
+
+            body {
+                margin: 0;
+                padding: 0;
+                color: white;
+                font-family: Arial, sans-serif;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .bg-wrapper {
+                position: relative;
+                height: 100vh;
+                background-image: url('https://i.pinimg.com/originals/ce/c4/ee/cec4ee792d64120b28b708c1424c2a45.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                overflow: hidden;
+                /* Add this line to hide overflow from background */
+            }
+
+            .content-wrapper {
+                position: absolute;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                top: 0px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow-y: auto;
+                padding-top: 12vh;
+            }
+
+            .blur-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(8px);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+
+
+            #page {
+                position: absolute;
+                font-family: "Audiowide", sans-serif;
+                color: white;
+                font-weight: bold;
+                margin-bottom: 20px;
+                top: 0.01px;
+                text-align: center;
+                font-size: 5vw;
+            }
+
+            p {
+                color: white;
+                text-align: center;
+                /* Center the text */
+            }
+
+            #introText {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                font-weight: normal;
+                font-size: 3vw;
+                position: absolute;
+                top: 66vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                line-height: 1.3;
+            }
+
+
+            #cause {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 85vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 5vw;
+                line-height: 1.3;
+
+            }
+
+            #cause1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 104vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #Prevention {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 121vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 5vw;
+                line-height: 1.3;
+
+            }
+
+            #Prevention1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 144vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #Pes {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 165vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 5vw;
+                line-height: 1.3;
+
+            }
+
+            #Pes1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 175vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #pes2 {
+
+                align-items: center;
+                top: 183vh;
+                position: absolute;
+
+            }
+
+            #pes3 {
+
+                align-items: center;
+                top: 207vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+
+
+            #pes22 {
+
+
+                top: 215vh;
+                position: absolute;
+
+            }
+
+            #pes23 {
+
+
+                top: 239vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+
+            #pes12 {
+
+
+                top: 247vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+            #pes13 {
+
+
+                top: 272vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+
+
+
+
+
+            .button {
+                border-radius: 12px;
+                background-size: cover;
+                width: 75px;
+                height: 45px;
+                border: 2px solid #04AA6D;
+                cursor: pointer;
+                outline: none;
+                background-color: rgb(190, 209, 19);
+                transition-duration: 0.4s;
+                font-weight: bold;
+                /* Use font-weight for text boldness */
+            }
+
+
+            .button:hover {
+                background-color: rgba(130, 139, 9, 0);
+                color: aliceblue;
+
+            }
+
+            #pes4 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 285vh;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 3vw;
+                line-height: 1.3;
+
+
+
+
+            }
+
+
+
+
+
+            .content {
+                margin: auto;
+                width: 190px;
+                perspective: 1000px;
+                position: relative;
+                padding-top: 80px;
+
+            }
+
+            .content-carrousel {
+                width: 100%;
+                position: absolute;
+                float: right;
+                animation: rotar 15s infinite linear;
+                transform-style: preserve-3d;
+
+            }
+
+            .content-carrousel:hover {
+                animation-play-state: paused;
+                cursor: pointer;
+            }
+
+            .content-carrousel figure {
+                width: 100%;
+                height: 120px;
+                border: 1px solid #4d444d;
+                overflow: hidden;
+                position: absolute;
+
+            }
+
+            .content-carrousel figure:nth-child(1) {
+                transform: rotateY(0deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(2) {
+                transform: rotateY(40deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(3) {
+                transform: rotateY(80deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(4) {
+                transform: rotateY(120deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(5) {
+                transform: rotateY(160deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(6) {
+                transform: rotateY(200deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(7) {
+                transform: rotateY(240deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(8) {
+                transform: rotateY(280deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(9) {
+                transform: rotateY(320deg) translateZ(300px);
+            }
+
+            .shadow {
+                position: absolute;
+                box-shadow: 0px 0px 20px 0px #000;
+                border-radius: 2px;
+            }
+
+            .content-carrousel img {
+                image-rendering: auto;
+                transition: all 300ms;
+                width: 100%;
+                height: 100%;
+            }
+
+            .content-carrousel img:hover {
+                transform: scale(1.2);
+                transition: all 300ms;
+
+            }
+
+            @keyframes rotar {
+                from {
+                    transform: rotateY(0deg);
+                }
+
+                to {
+                    transform: rotateY(360deg);
+
+                }
+            }
+        }
     </style>
 
 </head>
@@ -456,55 +915,90 @@
                 <div class="content">
                     <div class="content-carrousel">
                         <figure class="shadow"><img src="https://krishijagran.com/media/42176/pest.png"></figure>
-                        <figure class="shadow"><img src="https://d30ifv2c9xs6en.cloudfront.net/public/icgGuideGallery/48/m_en_icgGuideGallery_48_0.JPG"></figure>
-                        <figure class="shadow"><img src="https://doa.gov.lk/wp-content/uploads/2020/06/brownspot3-1024x683.jpg"></figure>
-                        <figure class="shadow"><img src="https://newagriindia.com/wp-content/uploads/2022/02/Brown-spot-of-rice-1.jpg"></figure>
-                        <figure class="shadow"><img src="https://www.lsuagcenter.com/~/media/system/a/d/8/5/ad8530570cba97948c70c60bf250afdc/brownspot3.jpg?h=897&la=en&w=1244"></figure>
-                       <figure class="shadow"><img src="https://www.krishisewa.com/images/articles/2013/dpaddy1.jpg"></figure>
-                        <figure class="shadow"><img src="https://www.apnikheti.com/upload/crops/crops_thumb/idea99Brown_leaf_spot_rice.jpg"></figure>
-                        <figure class="shadow"><img src="https://tse3.mm.bing.net/th?id=OIP.cOy-ft93x4vwGSV81BUSUgAAAA&pid=Api&P=0&h=180"></figure>
-                        <figure class="shadow"><img src="https://tse2.mm.bing.net/th?id=OIP.gL3illeOvMm3iiTkWGoN9AHaEK&pid=Api&P=0&h=180"></figure>
+                        <figure class="shadow"><img
+                                src="https://d30ifv2c9xs6en.cloudfront.net/public/icgGuideGallery/48/m_en_icgGuideGallery_48_0.JPG">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://doa.gov.lk/wp-content/uploads/2020/06/brownspot3-1024x683.jpg"></figure>
+                        <figure class="shadow"><img
+                                src="https://newagriindia.com/wp-content/uploads/2022/02/Brown-spot-of-rice-1.jpg">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://www.lsuagcenter.com/~/media/system/a/d/8/5/ad8530570cba97948c70c60bf250afdc/brownspot3.jpg?h=897&la=en&w=1244">
+                        </figure>
+                        <figure class="shadow"><img src="https://www.krishisewa.com/images/articles/2013/dpaddy1.jpg">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://www.apnikheti.com/upload/crops/crops_thumb/idea99Brown_leaf_spot_rice.jpg">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://tse3.mm.bing.net/th?id=OIP.cOy-ft93x4vwGSV81BUSUgAAAA&pid=Api&P=0&h=180">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://tse2.mm.bing.net/th?id=OIP.gL3illeOvMm3iiTkWGoN9AHaEK&pid=Api&P=0&h=180">
+                        </figure>
                     </div>
                 </div>
             </section>
 
-            
-            
-            <p id="introText"> 
-                Brown spot is a common fungal disease affecting rice plants, caused by the pathogen Bipolaris oryzae (formerly known as Helminthosporium oryzae). This disease manifests as small, oval to elongated lesions on rice leaves, initially appearing water-soaked and then turning brown with yellowish halos. Brown spot can lead to reduced photosynthesis, stunted growth, and ultimately yield losses if left unchecked. The disease thrives in warm and humid conditions, spreading through infected seeds and crop residues. Effective management strategies include planting resistant varieties, practicing crop rotation, maintaining proper drainage, and applying fungicides when necessary.</p>
 
-           <p id="cause">CAUSE</p>
-           <p id="cause1">Brown spot in rice plants is caused by the fungal pathogen Bipolaris oryzae (formerly Helminthosporium oryzae). This disease primarily affects rice leaves, forming small, oval to elongated lesions. The lesions initially appear water-soaked and then develop into brown spots with yellowish halos. Brown spot is prevalent in warm and humid conditions, spreading through infected seeds and crop residues. It can lead to reduced photosynthesis, stunted growth, and yield losses if not managed effectively.</p>
-           <p id="Prevention">Prevention</p>
-           <p id="Prevention1">
-            Effective measures for managing brown spot in rice plants include planting resistant varieties, practicing crop rotation, maintaining proper drainage to reduce humidity, and timely removal of crop residues. Additionally, applying fungicides when necessary can help control the spread of the fungal pathogen Bipolaris oryzae and minimize yield losses.Consider a hot water seed treatment or fungicide application before sowing for an extra layer of protection.</p>
-           <p id="Pes">PESTICIDES</p>
-           <p id="Pes1">Copper-based bactericides such as copper hydroxide or copper oxychloride are commonly used pesticides for managing bacterial leaf blight in rice plants.</p>
-           <div id="pes2"><img src="https://5.imimg.com/data5/SELLER/Default/2023/5/310342696/YQ/WZ/GO/148816997/carbendazim-systemic-fungicide-500x500.jpg"  width="200" height="200" ></div>
-           <div id="pes3"><button class="button" onclick="myFunction()">Buy Now</button></div>
-           
-           <div id="pes12"><img src="https://5.imimg.com/data5/SELLER/Default/2021/5/CR/ZU/XW/28154989/nativo-tebuconazole-trifloxystrobin-75-wg-50-25-w-w-10gm-500x500.JPG"  width="200" height="200" ></div>
-           <div id="pes13"><button class="button" onclick="myFunction1()">Buy Now</button></div>
 
-           <div id="pes22"><img src="https://m.media-amazon.com/images/I/51w2sbQVMHL._SX522_.jpg"  width="200" height="200" ></div>
-           <div id="pes23"><button class="button" onclick="myFunction2()">Buy Now</button></div>
+            <p id="introText">
+                Brown spot is a common fungal disease affecting rice plants, caused by the pathogen Bipolaris oryzae
+                (formerly known as Helminthosporium oryzae). This disease manifests as small, oval to elongated lesions
+                on rice leaves, initially appearing water-soaked and then turning brown with yellowish halos. Brown spot
+                can lead to reduced photosynthesis, stunted growth, and ultimately yield losses if left unchecked. The
+                disease thrives in warm and humid conditions, spreading through infected seeds and crop residues.
+                Effective management strategies include planting resistant varieties, practicing crop rotation,
+                maintaining proper drainage, and applying fungicides when necessary.</p>
 
-           <p id="pes4">Designed By Siva G</p>
+            <p id="cause">CAUSE</p>
+            <p id="cause1">Brown spot in rice plants is caused by the fungal pathogen Bipolaris oryzae (formerly
+                Helminthosporium oryzae). This disease primarily affects rice leaves, forming small, oval to elongated
+                lesions. The lesions initially appear water-soaked and then develop into brown spots with yellowish
+                halos. Brown spot is prevalent in warm and humid conditions, spreading through infected seeds and crop
+                residues. It can lead to reduced photosynthesis, stunted growth, and yield losses if not managed
+                effectively.</p>
+            <p id="Prevention">Prevention</p>
+            <p id="Prevention1">
+                Effective measures for managing brown spot in rice plants include planting resistant varieties,
+                practicing crop rotation, maintaining proper drainage to reduce humidity, and timely removal of crop
+                residues. Additionally, applying fungicides when necessary can help control the spread of the fungal
+                pathogen Bipolaris oryzae and minimize yield losses.Consider a hot water seed treatment or fungicide
+                application before sowing for an extra layer of protection.</p>
+            <p id="Pes">PESTICIDES</p>
+            <p id="Pes1">Copper-based bactericides such as copper hydroxide or copper oxychloride are commonly used
+                pesticides for managing bacterial leaf blight in rice plants.</p>
+            <div id="pes2"><img
+                    src="https://5.imimg.com/data5/SELLER/Default/2023/5/310342696/YQ/WZ/GO/148816997/carbendazim-systemic-fungicide-500x500.jpg"
+                    width="200" height="200"></div>
+            <div id="pes3"><button class="button" onclick="myFunction()">Buy Now</button></div>
 
-           <script>
-            function myFunction1() {
-              location.replace("https://www.amazon.in/BAYER-NATIVO-SYSTEMIC-FUNGICIDE-50GM/dp/B0CD7DPRZ9/ref=sr_1_3_sspa?adgrpid=1323813607471482&dib=eyJ2IjoiMSJ9.B43lRur69vrYS3DABiZMfxt_D2DLJ09n92dwRDYlBiipbPvuQn5hBgA3Ta5tLi_oc5_MuyhljDFZPvwlMjfkq8eZwwhSItPl7aftW8CN29SHxIFbunOJXoFOrCHxwqzNTvx_xzj7v07frpDm8WxW-FWRjZSLR9lbGZuBxmORo8DNqqZ57rb4cn75TX8zakZJCtREAWiSxdUXrCfoMTnS-w0gAdlFdg2StUETuraGDYM-7glp259-Dkjh_XUkdKLgTx6IxbvnOUAcEp50S0fgjDBf9vUUvfq7w5CHQ5-ueJM.ZfdTtnJc14vYEMV8tU6a7h7cOW4a9JeWf3TrSbFbc1c&dib_tag=se&hvadid=82738617098645&hvbmt=bp&hvdev=c&hvlocphy=1661&hvnetw=o&hvqmt=p&hvtargid=kwd-82739227714884%3Aloc-90&hydadcr=5871_2377703&keywords=carbendazim+fungicide&qid=1711035116&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1")
-            }
-            function myFunction1() {
-              location.replace("https://m.indiamart.com/proddetail/carbendazim-systemic-fungicide-2851254560012.html")
-            }
-            function myFunction2() {
-              location.replace("https://www.amazon.in/DeHaat-Azytop-Azoxystrobin-Tebuconazole-18-3/dp/B0CFL91RZV/ref=sr_1_6?crid=26YGYC6ZCRQQU&dib=eyJ2IjoiMSJ9.VqGPw7WHfbA6TbokN95NU2uVCCOe25DM1c3VSWgnw3i3D6YsbdVO7N28n3YJeVAR1DxREiCZsLEuvFxSEoVUNssUq-XFZeeXdIY5Hpcie9DF19skREMfsbcfV526-eu_MawbuwweJEWjrhwa_7Su2KR9lVkzdj5PR7FyTtjmmA_45PVU8e0EABE1LgPIAlCWH3GrgCWGC-U7QIPJ2Wi9OEUp7nrsDVKQnST3CA2-lHGvQ7ioTwGxVwG2NQAkvKgHFIZa6l31wd4wNC7UIVVUr8aMePTvVA3bQu5wYEkgSmw.DQQjbg-ZVV11NXec0hohSnulPkntvTies29SSlFZqBY&dib_tag=se&keywords=azoxystrobin&qid=1711035837&sprefix=azoxystrobin%2Caps%2C216&sr=8-6&th=1")
-            }
-            
-            
+            <div id="pes12"><img
+                    src="https://5.imimg.com/data5/SELLER/Default/2021/5/CR/ZU/XW/28154989/nativo-tebuconazole-trifloxystrobin-75-wg-50-25-w-w-10gm-500x500.JPG"
+                    width="200" height="200"></div>
+            <div id="pes13"><button class="button" onclick="myFunction1()">Buy Now</button></div>
+
+            <div id="pes22"><img src="https://m.media-amazon.com/images/I/51w2sbQVMHL._SX522_.jpg" width="200"
+                    height="200"></div>
+            <div id="pes23"><button class="button" onclick="myFunction2()">Buy Now</button></div>
+
+            <p id="pes4">Designed By Siva G</p>
+
+            <script>
+                function myFunction1() {
+                    location.replace("https://www.amazon.in/BAYER-NATIVO-SYSTEMIC-FUNGICIDE-50GM/dp/B0CD7DPRZ9/ref=sr_1_3_sspa?adgrpid=1323813607471482&dib=eyJ2IjoiMSJ9.B43lRur69vrYS3DABiZMfxt_D2DLJ09n92dwRDYlBiipbPvuQn5hBgA3Ta5tLi_oc5_MuyhljDFZPvwlMjfkq8eZwwhSItPl7aftW8CN29SHxIFbunOJXoFOrCHxwqzNTvx_xzj7v07frpDm8WxW-FWRjZSLR9lbGZuBxmORo8DNqqZ57rb4cn75TX8zakZJCtREAWiSxdUXrCfoMTnS-w0gAdlFdg2StUETuraGDYM-7glp259-Dkjh_XUkdKLgTx6IxbvnOUAcEp50S0fgjDBf9vUUvfq7w5CHQ5-ueJM.ZfdTtnJc14vYEMV8tU6a7h7cOW4a9JeWf3TrSbFbc1c&dib_tag=se&hvadid=82738617098645&hvbmt=bp&hvdev=c&hvlocphy=1661&hvnetw=o&hvqmt=p&hvtargid=kwd-82739227714884%3Aloc-90&hydadcr=5871_2377703&keywords=carbendazim+fungicide&qid=1711035116&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1")
+                }
+                function myFunction1() {
+                    location.replace("https://m.indiamart.com/proddetail/carbendazim-systemic-fungicide-2851254560012.html")
+                }
+                function myFunction2() {
+                    location.replace("https://www.amazon.in/DeHaat-Azytop-Azoxystrobin-Tebuconazole-18-3/dp/B0CFL91RZV/ref=sr_1_6?crid=26YGYC6ZCRQQU&dib=eyJ2IjoiMSJ9.VqGPw7WHfbA6TbokN95NU2uVCCOe25DM1c3VSWgnw3i3D6YsbdVO7N28n3YJeVAR1DxREiCZsLEuvFxSEoVUNssUq-XFZeeXdIY5Hpcie9DF19skREMfsbcfV526-eu_MawbuwweJEWjrhwa_7Su2KR9lVkzdj5PR7FyTtjmmA_45PVU8e0EABE1LgPIAlCWH3GrgCWGC-U7QIPJ2Wi9OEUp7nrsDVKQnST3CA2-lHGvQ7ioTwGxVwG2NQAkvKgHFIZa6l31wd4wNC7UIVVUr8aMePTvVA3bQu5wYEkgSmw.DQQjbg-ZVV11NXec0hohSnulPkntvTies29SSlFZqBY&dib_tag=se&keywords=azoxystrobin&qid=1711035837&sprefix=azoxystrobin%2Caps%2C216&sr=8-6&th=1")
+                }
+
+
             </script>
-        </div> 
+        </div>
     </div>
 
 </body>
