@@ -1,12 +1,991 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="https://i.pinimg.com/736x/13/20/98/1320980fa07dd189b052bef56f79dead.jpg"
+        type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brown Spot Prediction</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire">
+    <title>Leaf Blast</title>
+
+    <style>
+        @media (min-width: 1024px) {
+            body {
+                margin: 0;
+                padding: 0;
+                color: white;
+                font-family: Arial, sans-serif;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .bg-wrapper {
+                position: relative;
+                height: 100vh;
+                background-image: url('https://i.pinimg.com/originals/ce/c4/ee/cec4ee792d64120b28b708c1424c2a45.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                overflow: hidden;
+                /* Add this line to hide overflow from background */
+            }
+
+            .content-wrapper {
+                position: absolute;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow-y: auto;
+                /* Change to 'auto' to enable scrolling */
+                padding-top: 27vh;
+            }
+
+            .blur-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(8px);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+
+
+            #page {
+                position: absolute;
+                font-family: "Audiowide", sans-serif;
+                color: white;
+                font-weight: bold;
+                margin-bottom: 20px;
+                top: 0.01px;
+                text-align: center;
+                font-size: 5vw;
+            }
+
+            p {
+                color: white;
+                text-align: center;
+                /* Center the text */
+            }
+
+            #pes13 {
+
+
+                top: 207vh;
+                position: absolute;
+                border: #000;
+                left: 226px;
+            }
+
+            #introText {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                /* background-color: rgb(0, 0, 0);
+            /* Fallback color */
+                /*   background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/opacity/see-through */
+                color: white;
+                font-weight: normal;
+                font-size: 1vw;
+                position: absolute;
+                top: 75vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                line-height: 1.3;
+            }
+
+
+            #cause {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 90vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #cause1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 107vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 1vw;
+                line-height: 1.3;
+
+            }
+
+            #Prevention {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 119vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #Prevention1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 139vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 1vw;
+                line-height: 1.3;
+
+            }
+
+            #Pes {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 151vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #Pes1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 168vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 1vw;
+                line-height: 1.3;
+
+            }
+
+            #pes2 {
+
+                align-items: center;
+                top: 178vh;
+                position: absolute;
+
+            }
+
+            #pes3 {
+
+                align-items: center;
+                top: 207vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+            #pes12 {
+
+                left: 10%;
+                top: 178vh;
+                position: absolute;
+
+            }
+
+
+
+            #pes22 {
+
+                right: 10%;
+                top: 178vh;
+                position: absolute;
+
+            }
+
+            #pes23 {
+
+                right: 13%;
+                top: 207vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+
+
+            .button {
+                border-radius: 12px;
+                background-size: cover;
+                width: 75px;
+                height: 45px;
+                border: 2px;
+                border: 2px solid #04AA6D;
+
+                cursor: pointer;
+                outline: none;
+                background-color: rgb(190, 209, 19);
+                transition-duration: 0.4s;
+                size: 2px;
+                font-weight: 2px;
+
+            }
+
+            .button:hover {
+                background-color: rgba(130, 139, 9, 0);
+                color: aliceblue;
+
+            }
+
+            #pes4 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 240vh;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 1vw;
+                line-height: 1.3;
+
+
+
+
+            }
+
+
+
+
+
+            .content {
+                margin: auto;
+                width: 190px;
+                perspective: 1000px;
+                position: relative;
+                padding-top: 80px;
+
+            }
+
+            .content-carrousel {
+                width: 100%;
+                position: absolute;
+                float: right;
+                animation: rotar 15s infinite linear;
+                transform-style: preserve-3d;
+
+            }
+
+            .content-carrousel:hover {
+                animation-play-state: paused;
+                cursor: pointer;
+            }
+
+            .content-carrousel figure {
+                width: 100%;
+                height: 120px;
+                border: 1px solid #4d444d;
+                overflow: hidden;
+                position: absolute;
+
+            }
+
+            .content-carrousel figure:nth-child(1) {
+                transform: rotateY(0deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(2) {
+                transform: rotateY(40deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(3) {
+                transform: rotateY(80deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(4) {
+                transform: rotateY(120deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(5) {
+                transform: rotateY(160deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(6) {
+                transform: rotateY(200deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(7) {
+                transform: rotateY(240deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(8) {
+                transform: rotateY(280deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(9) {
+                transform: rotateY(320deg) translateZ(300px);
+            }
+
+            .shadow {
+                position: absolute;
+                box-shadow: 0px 0px 20px 0px #000;
+                border-radius: 2px;
+            }
+
+            .content-carrousel img {
+                image-rendering: auto;
+                transition: all 300ms;
+                width: 100%;
+                height: 100%;
+            }
+
+            .content-carrousel img:hover {
+                transform: scale(1.2);
+                transition: all 300ms;
+
+            }
+
+            @keyframes rotar {
+                from {
+                    transform: rotateY(0deg);
+                }
+
+                to {
+                    transform: rotateY(360deg);
+
+                }
+            }
+
+        }
+
+        @media (max-width: 430px) {
+
+
+            body {
+                margin: 0;
+                padding: 0;
+                color: white;
+                font-family: Arial, sans-serif;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .bg-wrapper {
+                position: relative;
+                height: 100vh;
+                background-image: url('https://i.pinimg.com/originals/ce/c4/ee/cec4ee792d64120b28b708c1424c2a45.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                overflow: hidden;
+                /* Add this line to hide overflow from background */
+            }
+
+            .content-wrapper {
+                position: absolute;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                top: 0px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow-y: auto;
+                padding-top: 12vh;
+            }
+
+            .blur-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(8px);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+
+
+            #page {
+                position: absolute;
+                font-family: "Audiowide", sans-serif;
+                color: white;
+                font-weight: bold;
+                margin-bottom: 20px;
+                top: 0.01px;
+                text-align: center;
+                font-size: 5vw;
+            }
+
+            p {
+                color: white;
+                text-align: center;
+                /* Center the text */
+            }
+
+            #introText {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                font-weight: normal;
+                font-size: 3vw;
+                position: absolute;
+                top: 66vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                line-height: 1.3;
+            }
+
+
+            #cause {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 85vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 5vw;
+                line-height: 1.3;
+
+            }
+
+            #cause1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 104vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #Prevention {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 121vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 5vw;
+                line-height: 1.3;
+
+            }
+
+            #Prevention1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 144vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #Pes {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 165vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 5vw;
+                line-height: 1.3;
+
+            }
+
+            #Pes1 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 175vh;
+                left: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+                text-align: justify;
+                text-justify: inter-word;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-size: 3vw;
+                line-height: 1.3;
+
+            }
+
+            #pes2 {
+
+                align-items: center;
+                top: 183vh;
+                position: absolute;
+
+            }
+
+            #pes3 {
+
+                align-items: center;
+                top: 207vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+
+
+            #pes22 {
+
+
+                top: 215vh;
+                position: absolute;
+
+            }
+
+            #pes23 {
+
+
+                top: 239vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+
+            #pes12 {
+
+
+                top: 247vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+            #pes13 {
+
+
+                top: 272vh;
+                position: absolute;
+                border: #000;
+            }
+
+
+
+
+
+
+
+            .button {
+                border-radius: 12px;
+                background-size: cover;
+                width: 75px;
+                height: 45px;
+                border: 2px solid #04AA6D;
+                cursor: pointer;
+                outline: none;
+                background-color: rgb(190, 209, 19);
+                transition-duration: 0.4s;
+                font-weight: bold;
+                /* Use font-weight for text boldness */
+            }
+
+
+            .button:hover {
+                background-color: rgba(130, 139, 9, 0);
+                color: aliceblue;
+
+            }
+
+            #pes4 {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                color: white;
+                font-weight: normal;
+
+                position: absolute;
+                top: 285vh;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 80%;
+                padding: 20px;
+                text-align: center;
+
+                text-justify: inter-word;
+                font-family: "Audiowide", sans-serif;
+                font-size: 3vw;
+                line-height: 1.3;
+
+
+
+
+            }
+
+
+
+
+
+            .content {
+                margin: auto;
+                width: 190px;
+                perspective: 1000px;
+                position: relative;
+                padding-top: 80px;
+
+            }
+
+            .content-carrousel {
+                width: 100%;
+                position: absolute;
+                float: right;
+                animation: rotar 15s infinite linear;
+                transform-style: preserve-3d;
+
+            }
+
+            .content-carrousel:hover {
+                animation-play-state: paused;
+                cursor: pointer;
+            }
+
+            .content-carrousel figure {
+                width: 100%;
+                height: 120px;
+                border: 1px solid #4d444d;
+                overflow: hidden;
+                position: absolute;
+
+            }
+
+            .content-carrousel figure:nth-child(1) {
+                transform: rotateY(0deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(2) {
+                transform: rotateY(40deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(3) {
+                transform: rotateY(80deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(4) {
+                transform: rotateY(120deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(5) {
+                transform: rotateY(160deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(6) {
+                transform: rotateY(200deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(7) {
+                transform: rotateY(240deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(8) {
+                transform: rotateY(280deg) translateZ(300px);
+            }
+
+            .content-carrousel figure:nth-child(9) {
+                transform: rotateY(320deg) translateZ(300px);
+            }
+
+            .shadow {
+                position: absolute;
+                box-shadow: 0px 0px 20px 0px #000;
+                border-radius: 2px;
+            }
+
+            .content-carrousel img {
+                image-rendering: auto;
+                transition: all 300ms;
+                width: 100%;
+                height: 100%;
+            }
+
+            .content-carrousel img:hover {
+                transform: scale(1.2);
+                transition: all 300ms;
+
+            }
+
+            @keyframes rotar {
+                from {
+                    transform: rotateY(0deg);
+                }
+
+                to {
+                    transform: rotateY(360deg);
+
+                }
+            }
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>Brown Spot Prediction</h1>
-    <p>This is the content for the Brown Spot prediction.</p>
+
+    <div class="bg-wrapper">
+        <div class="blur-overlay"></div>
+        <div class="content-wrapper">
+            <p id="page">Leaf Blast</p>
+
+            <section class="slideshow">
+                <div class="content">
+                    <div class="content-carrousel">
+                        <figure class="shadow"><img src="https://krishijagran.com/media/42176/pest.png"></figure>
+                        <figure class="shadow"><img
+                                src="https://d30ifv2c9xs6en.cloudfront.net/public/icgGuideGallery/48/m_en_icgGuideGallery_48_0.JPG">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://doa.gov.lk/wp-content/uploads/2020/06/brownspot3-1024x683.jpg"></figure>
+                        <figure class="shadow"><img
+                                src="https://newagriindia.com/wp-content/uploads/2022/02/Brown-spot-of-rice-1.jpg">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://www.lsuagcenter.com/~/media/system/a/d/8/5/ad8530570cba97948c70c60bf250afdc/brownspot3.jpg?h=897&la=en&w=1244">
+                        </figure>
+                        <figure class="shadow"><img src="https://www.krishisewa.com/images/articles/2013/dpaddy1.jpg">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://www.apnikheti.com/upload/crops/crops_thumb/idea99Brown_leaf_spot_rice.jpg">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://tse3.mm.bing.net/th?id=OIP.cOy-ft93x4vwGSV81BUSUgAAAA&pid=Api&P=0&h=180">
+                        </figure>
+                        <figure class="shadow"><img
+                                src="https://tse2.mm.bing.net/th?id=OIP.gL3illeOvMm3iiTkWGoN9AHaEK&pid=Api&P=0&h=180">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <p id="introText">
+                Rice blast disease manifests through lesions on leaves, stems, panicles, and grains, causing diminished photosynthesis, nutrient absorption, and yield reduction. Its cycle initiates when fungal spores (conidia) settle on rice leaves in conducive environments. These spores germinate, infiltrate plant tissues, and induce infection, resulting in lesion formation and disease propagation. Managing rice blast necessitates preventive measures like crop rotation, resistant varieties, and fungicide application. Timely detection and intervention are crucial for mitigating its impact and preserving rice yields..</p>
+
+            <p id="cause">CAUSE</p>
+            <p id="cause1">Several factors contribute to the development and spread of leaf blast in rice plants. These include environmental conditions such as temperature, humidity, and rainfall, which influence the growth and dispersal of the fungal pathogen. Additionally, rice cultivars vary in their susceptibility to blast disease, with some varieties showing greater resistance than others. Cultural practices, such as planting density, water management, and fertilizer application, can also affect the severity of leaf blast.</p>
+            <p id="Prevention">Prevention</p>
+            <p id="Prevention1">
+                Managing leaf blast in rice plants requires an integrated approach that combines cultural, genetic, and chemical control measures. Cultural practices such as crop rotation, proper water management, and field hygiene play a crucial role in reducing disease risk by disrupting the pathogen's life cycle and creating unfavorable conditions for its growth. Additionally, planting resistant or tolerant rice varieties is essential to minimize reliance on fungicides and decrease yield losses. When chemical control is necessary, judicious use of fungicides based on accurate disease monitoring and forecasting is key to preventing fungicide resistance, environmental pollution, and health risks, thus ensuring effective disease management while maintaining agricultural sustainability..</p>
+            <p id="Pes">PESTICIDES</p>
+            <p id="Pes1">
+                For managing leaf blast in rice plants, effective pesticides include triazoles (e.g., tebuconazole, propiconazole), strobilurins (e.g., azoxystrobin, trifloxystrobin), and carboxamides (e.g., benzovindiflupyr), chosen based on the specific strain of the pathogen and local regulations. It's essential to follow label instructions, apply pesticides at recommended rates and timings, and integrate them into an integrated pest management (IPM) strategy for sustainable disease control in rice cultivation.</p>
+            <div id="pes2"><img
+                    src="https://cdn.dotpe.in/longtail/store-items/8009603/yNNgD8GZ.jpeg"
+                    width="200" height="200"></div>
+            <div id="pes3"><button class="button" onclick="myFunction()">Buy Now</button></div>
+
+            <div id="pes12"><img
+                    src="https://5.imimg.com/data5/SELLER/Default/2023/12/372174880/XX/HB/ZZ/59373149/syngenta-tilt-fungicide-500x500.png"
+                    width="200" height="200"></div>
+            <div id="pes13"><button class="button" onclick="myFunction1()">Buy Now</button></div>
+
+            <div id="pes22"><img src="https://quali-pro.ca/wp-content/uploads/2022/06/jug_Chlorothalonil720F_EN_2022.png" width="200"
+                    height="200"></div>
+            <div id="pes23"><button class="button" onclick="myFunction2()">Buy Now</button></div>
+
+            <p id="pes4">Designed By Siva G</p>
+
+            <script>
+                function myFunction() {
+                    location.replace("https://hdagrochemicals.com/product/29449350/Merivon--Fluxapyroxad-250-G-L---Pyraclostrobin-250-G-L-SC--250-ML")
+                }
+                function myFunction1() {
+                    location.replace("https://m.indiamart.com/proddetail/syngenta-tilt-fungicide-19060995691.html")
+                }
+                function myFunction2() {
+                    location.replace("https://www.kingquenson.com/Fungicide/Hymexazol.html")
+                }
+
+
+            </script>
+        </div>
+    </div>
+
 </body>
+
 </html>
