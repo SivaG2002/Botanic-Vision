@@ -56,7 +56,7 @@ def predict():
                 max_index = np.argmax(predictions)
                 max_value = predictions[0][max_index]
                 percentage = max_value * 100
-                if max_value < 0.9:
+                if max_value < 0.3:
                     return 'Error', percentage
                 else:
                     return class_labels[max_index], percentage
