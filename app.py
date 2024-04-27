@@ -50,7 +50,7 @@ def predict():
 
             prediction = model.predict(img)
 
-            class_labels = ['Brown spot', 'Leaf smut', 'Tungro', 'Leaf Blast', 'Bacterial leaf blight']
+            class_labels = ['Brown spot', 'Leaf smut', 'Tungro', 'Leaf Blast', 'Bacterial leaf blight', 'Error']
 
             def get_class_label(predictions):
                 max_index = np.argmax(predictions)
