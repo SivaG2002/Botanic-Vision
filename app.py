@@ -5,6 +5,11 @@ from PIL import Image
 import numpy as np
 import os
 
+def sum(a,b):
+    s=a*b
+
+
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_strong_secret_key'
 app.config['UPLOAD_FOLDER'] = 'static/uploads/'
